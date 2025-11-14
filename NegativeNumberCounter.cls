@@ -39,3 +39,9 @@ public class Demo {
 List<Integer> numbers = new List<Integer>{3, 5, 6, 7, 8, -3, -5, -7};
 Demo obj = new Demo();
 obj.negativeNumCount(numbers);
+/*
+---------------------------------------------
+Expected Output (Debug Logs):
+Total negative numbers found: 3
+---------------------------------------------
+*/
