@@ -37,10 +37,11 @@ public class Demo {
         System.debug('Biggest Number: ' + biggestNumber);
     }
 }
---------------------------------------------------------------
+//--------------------------------------------------------------
 // Execute in Anonymous Apex window
 Demo d = new Demo();
 d.result(new List<Integer>{3, 10, 8, 25, 4});
 System.debug('Result from getResult(): ' + d.getResult());
---------------------------------------------------------------
+//--------------------------------------------------------------
+//Output
 Result from getResult(): 25
