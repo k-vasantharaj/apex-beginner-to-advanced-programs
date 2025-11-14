@@ -1,0 +1,46 @@
+/**
+ * @description      Apex class to find the biggest (maximum) number in a list.
+ * @author           Vasantharaj K
+ * @date             2025-11-15
+ *
+ * This class contains a simple algorithm to iterate through a list of integers
+ * and determine the largest value. It demonstrates basic Apex control flow, 
+ * variable assignment, and best coding practices.
+ */
+
+public class Demo {
+
+    // Stores the maximum value found in the list
+    public Integer biggestNumber = 0;
+
+    /**
+     * @description  Iterates through the input list and updates biggestNumber 
+     *               with the highest value found.
+     * @param        num - List of Integer values to evaluate
+     */
+    public void result(List<Integer> num) {
+
+        // Validate input
+        if (num == null || num.isEmpty()) {
+            System.debug('Input list is empty or null.');
+            return;
+        }
+
+        // Iterate through all numbers and find the maximum
+        for (Integer n : num) {
+            if (n > biggestNumber) {
+                biggestNumber = n;
+            }
+        }
+
+        // Print the final result
+        System.debug('Biggest Number: ' + biggestNumber);
+    }
+}
+--------------------------------------------------------------
+// Execute in Anonymous Apex window
+Demo d = new Demo();
+d.result(new List<Integer>{3, 10, 8, 25, 4});
+System.debug('Result from getResult(): ' + d.getResult());
+--------------------------------------------------------------
+Result from getResult(): 25
