@@ -1,0 +1,19 @@
+public class ContactIndustryService {
+
+    public static void printBankingContacts() {
+        // Query all Contacts whose Account Industry is 'Banking'
+        List<Contact> conList = [
+            SELECT LastName, Account.Industry
+            FROM Contact
+            WHERE Account.Industry = 'Banking'
+        ];
+
+        for (Contact con : conList) {
+            System.debug('Contact: ' + con.LastName + 
+                         ' | Industry: ' + con.Account.Industry);
+        }
+    }
+}
+
+// Anonymous block
+ContactIndustryService.printBankingContacts();
