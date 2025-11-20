@@ -6,7 +6,7 @@ public class ContactCountFilter {
             SELECT AccountId, COUNT(Id) contactCount
             FROM Contact
             GROUP BY AccountId
-            HAVING COUNT(Id) > 2
+            HAVING COUNT(Id) > 5
         ];
 
         for (AggregateResult record : aggregatedResults) {
