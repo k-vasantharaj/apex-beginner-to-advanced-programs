@@ -18,3 +18,14 @@ public class OpportunityRevenueAnalyzer {
         }
     }
 }
+
+//Anonymous Apex Call
+OpportunityRevenueAnalyzer.getTop5StagesByMaxRevenue();
+
+//Sample Debug Output
+
+Stage Name: Closed Won | Max Revenue: 500000
+Stage Name: Proposal/Price Quote | Max Revenue: 300000
+Stage Name: Negotiation/Review | Max Revenue: 250000
+Stage Name: Qualification | Max Revenue: 180000
+Stage Name: Prospecting | Max Revenue: 120000
