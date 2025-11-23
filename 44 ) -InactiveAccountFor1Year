@@ -1,0 +1,28 @@
+public class ContactStaleFetcher {
+
+    public static void getStaleContacts() {
+
+        // Fetch contacts not updated in over one year
+        List<Contact> conList = [
+            SELECT Id, LastName, LastModifiedDate
+            FROM Contact
+            WHERE LastModifiedDate < LAST_N_YEARS:1
+        ];
+
+        // Output results
+        if (!conList.isEmpty()) {
+            for (Contact c : conList) {
+                System.debug('Contact: ' + c.LastName +
+                             ' | Last Modified: ' + c.LastModifiedDate);
+            }
+        } else {
+            System.debug('No contacts older than 1 year.');
+        }
+    }
+}
+//Anonymous Apex 
+ContactStaleFetcher.getStaleContacts();
+
+// Sample Debug Output (Example)
+Contact: Smith | Last Modified: 2024-08-15 13:22:10
+Contact: Johnson | Last Modified: 2024-07-03 09:41:55
