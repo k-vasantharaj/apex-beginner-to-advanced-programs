@@ -21,3 +21,9 @@ public class TaskDueSoonFetcher {
         }
     }
 }
+//Anonymous Apex 
+TaskDueSoonFetcher.getOpenTasksDueIn3Days();
+
+//Sample Debug Output 
+Task: Follow up with client | Due: 2025-11-24
+Task: Prepare sales report | Due: 2025-11-25
